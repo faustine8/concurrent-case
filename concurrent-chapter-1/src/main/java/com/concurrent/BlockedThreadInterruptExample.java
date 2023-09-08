@@ -7,15 +7,15 @@ import java.util.concurrent.TimeUnit;
  * 咕泡学院-Mic: 2082233439
  * http://www.gupaoedu.com
  **/
-public class BlockedThreadInterruptExample extends Thread{
+public class BlockedThreadInterruptExample extends Thread {
     @Override
-    public void run(){
-        while(!Thread.currentThread().isInterrupted()){
+    public void run() {
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 TimeUnit.SECONDS.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                //doSomething();
+                // doSomething();
                 Thread.currentThread().interrupt();
             }
         }
@@ -23,11 +23,11 @@ public class BlockedThreadInterruptExample extends Thread{
     }
 
     public static void main(String[] args) throws InterruptedException {
-        BlockedThreadInterruptExample blocked=new BlockedThreadInterruptExample();
+        BlockedThreadInterruptExample blocked = new BlockedThreadInterruptExample();
         blocked.start();
         TimeUnit.MILLISECONDS.sleep(100);
-        System.out.println("before:InterruptExample中断状态："+blocked.isInterrupted());
+        System.out.println("before:InterruptExample中断状态：" + blocked.isInterrupted());
         blocked.interrupt();
-        System.out.println("after:InterruptExample中断状态："+blocked.isInterrupted());
+        System.out.println("after:InterruptExample中断状态：" + blocked.isInterrupted());
     }
 }

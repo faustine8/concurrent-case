@@ -5,7 +5,7 @@ package com.concurrent;
  * 咕泡学院-Mic: 2082233439
  * http://www.gupaoedu.com
  **/
-public class ThreadStopExample extends Thread{
+public class ThreadStopExample extends Thread {
     @Override
     public void run() {
         try {
@@ -18,8 +18,9 @@ public class ThreadStopExample extends Thread{
             ex.printStackTrace();
         }
     }
+
     public static void main(String[] args) throws InterruptedException {
-        Thread t1=new ThreadStopExample();
+        Thread t1 = new ThreadStopExample();
         t1.start();
         Thread.sleep(100);
         t1.stop();
