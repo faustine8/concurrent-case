@@ -8,11 +8,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 @Slf4j
 public class CompletionStageExample {
 

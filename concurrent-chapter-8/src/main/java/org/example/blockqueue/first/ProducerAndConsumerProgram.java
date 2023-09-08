@@ -9,11 +9,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 @Slf4j
 public class ProducerAndConsumerProgram {
 

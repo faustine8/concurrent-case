@@ -3,11 +3,7 @@ package com.concurrent.example;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class ReentrantLockExample {
     static Lock lock=new ReentrantLock();
     private int count = 0;

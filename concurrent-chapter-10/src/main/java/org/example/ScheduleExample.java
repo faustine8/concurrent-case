@@ -6,11 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class ScheduleExample {
    /* public static void main(String[] args) {
         ScheduledExecutorService scheduledExecutorService= Executors.newScheduledThreadPool(3);

@@ -7,11 +7,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class ReadWriteLockExample {
     private final ReadWriteLock readWriteLock=new ReentrantReadWriteLock();
     private final Lock readLock=readWriteLock.readLock();

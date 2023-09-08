@@ -3,11 +3,7 @@ package com.concurrent;
 import java.io.*;
 import java.net.Socket;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class SocketThread implements Runnable {
     Socket socket;
 

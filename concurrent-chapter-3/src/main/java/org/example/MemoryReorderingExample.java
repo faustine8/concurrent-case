@@ -1,10 +1,6 @@
 package org.example;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class MemoryReorderingExample {
     private static int x=0,y=0;
     private static int a=0,b=0;

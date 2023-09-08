@@ -3,11 +3,7 @@ package org.example.blockqueue.third;
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class OrderDelayedTask implements Delayed {
 
     private String orderId;

@@ -2,11 +2,7 @@ package org.example;
 
 import java.util.concurrent.*;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class MemoryLeakExample {
     static class LocalVariable {
         private Long[] data=new Long[1024*1024];

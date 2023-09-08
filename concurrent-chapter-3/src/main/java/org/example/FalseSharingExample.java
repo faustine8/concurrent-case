@@ -2,11 +2,7 @@ package org.example;
 
 import sun.misc.Contended;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class FalseSharingExample implements Runnable{
     public final static long ITERATIONS = 500L * 1000L * 100L;
     private int arrayIndex = 0;

@@ -2,11 +2,7 @@ package com.concurrent.example;
 
 import java.util.concurrent.locks.StampedLock;
 
-/**
- * 咕泡学院，只为更好的你
- * 咕泡学院-Mic: 2082233439
- * http://www.gupaoedu.com
- **/
+
 public class Point {
     private double x, y;
     private final StampedLock sl = new StampedLock();
