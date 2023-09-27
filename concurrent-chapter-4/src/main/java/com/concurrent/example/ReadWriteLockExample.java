@@ -9,15 +9,16 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 
 public class ReadWriteLockExample {
-    private final ReadWriteLock readWriteLock=new ReentrantReadWriteLock();
-    private final Lock readLock=readWriteLock.readLock();
-    private final Lock writeLock=readWriteLock.writeLock();
-    private List<String> dataList=new ArrayList<>();
-    public void add(String data)  {
+    private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+    private final Lock readLock = readWriteLock.readLock();
+    private final Lock writeLock = readWriteLock.writeLock();
+    private List<String> dataList = new ArrayList<>();
+
+    public void add(String data) {
         writeLock.lock();
         try {
             dataList.add(data);
-        }finally {
+        } finally {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
@@ -26,36 +27,37 @@ public class ReadWriteLockExample {
             writeLock.unlock();
         }
     }
-    public String get(int idx){
+
+    public String get(int idx) {
         readLock.lock();
-        try{
+        try {
             return dataList.get(idx);
-        }finally {
-//            readLock.unlock();
+        } finally {
+            //            readLock.unlock();
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
-        ReadWriteLockExample example=new ReadWriteLockExample();
-        new Thread(()->{
+        ReadWriteLockExample example = new ReadWriteLockExample();
+        new Thread(() -> {
             example.add("xxx");
-        },"tw1").start();
+        }, "tw1").start();
         Thread.sleep(1000);
-        new Thread(()->{
+        new Thread(() -> {
             example.get(0);
 
-        },"tr1").start();
+        }, "tr1").start();
         Thread.sleep(1000);
 
-        new Thread(()->{
+        new Thread(() -> {
             example.add("xxxxxxyyyy");
 
-        },"tw2").start();
+        }, "tw2").start();
         Thread.sleep(1000);
 
-        new Thread(()->{
+        new Thread(() -> {
             example.get(0);
-        },"tr2").start();
+        }, "tr2").start();
 
     }
 }

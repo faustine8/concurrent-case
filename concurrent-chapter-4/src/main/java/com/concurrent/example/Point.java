@@ -42,8 +42,7 @@ public class Point {
                     x = newX;
                     y = newY;
                     break;
-                }
-                else {
+                } else {
                     sl.unlockRead(stamp);
                     stamp = sl.writeLock();
                 }
